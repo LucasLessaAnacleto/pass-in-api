@@ -74,8 +74,6 @@ Prisma como ORM (Object-Relational Mapping).
 
 - **@prisma/client@5.12.1**: é o cliente oficial do Prisma para interagir com bancos de dados em aplicativos Node.js. Ele fornece consultas tipadas, CRUD simplificado, suporte a relacionamentos de banco de dados e otimização de desempenho, tornando a manipulação de dados eficiente e segura.
 
-[Voltar](#índice)
-
 ## Requisitos funcionais
 - O organizador deve poder cadastrar um novo evento;
 - O organizador deve poder visualizar dados de um novo evento; 
@@ -95,8 +93,6 @@ Prisma como ORM (Object-Relational Mapping).
 - O CORS da API deve estar configurada para apenas o domínio do front-end poder fazer requisições
 - A comunicação entre o front-end e o back-end devem ser feitas em um servidor HTTP/1.1;
 - O corpo, os parametros de rotas e os parametros de busca de cada requisição deve ser estritamente validado para que estejam no formato adequado. 
-
-[Voltar](#índice)
 
 ## Rotas da aplicação
 
@@ -619,8 +615,6 @@ undefined
 - se tudo der certo retornará o código 204 sem conteúdo.
 
 </div><br>
-
-[Voltar](#índice)
 
 ## Iniciar a aplicação
 
