@@ -1,0 +1,29 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": "novo evento 654",
+    "details": null,
+    "maximumAttendees": null
+}
+
+### 
+POST http://localhost:3333/events/ecc8085d-25e5-4c05-a8c0-69713a07f1cf/attendees
+Content-Type: application/json
+
+{
+    "name": "maicon12",
+    "email": "maicon12@hotmail.com"
+}
+
+###
+GET http://localhost:3333/events/ecc8085d-25e5-4c05-a8c0-69713a07f1cf
+
+###
+GET http://localhost:3333/attendees/9966/badge
+
+###
+POST http://localhost:3333/attendees/9965/check-in
+
+###
+GET http://localhost:3333/events/ecc8085d-25e5-4c05-a8c0-69713a07f1cf/attendees
