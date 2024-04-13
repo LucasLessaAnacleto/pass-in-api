@@ -2,7 +2,7 @@
 
 Esse reposítório é o back-end do projeto `pass.in`.
 
-A intenção principal deses projeto é o aprendizado, por isso por mais que não tenha muitas features, nem uma regra de negócio complexa e ideal, ele foi desenvolvido com conceitos e técnicas sólidas da programação.
+A intenção principal desse projeto é o aprendizado, por isso por mais que não tenha muitas features, nem uma regra de negócio complexa e ideal, ele foi desenvolvido com conceitos e técnicas sólidas da programação.
 
 ## Índice
 
