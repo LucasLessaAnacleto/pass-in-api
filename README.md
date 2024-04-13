@@ -631,7 +631,7 @@ Certifique-se de ter as seguintes ferramentas instaladas em seu sistema:
 
 1. Clone este repositório para o seu ambiente local:
 ```bash
-git clone https://github.com/LucasLessaAnacleto/pass-in-api.git
+git clone https://github.com/LucasLessaAnacleto/pass.in-api.git
 ```
 <br>
 
