@@ -57,7 +57,7 @@ Typescript adicionando tipagem estática.
 
 - **tsup@8.0.2**: Com o tsup, é possível transpilar e empacotar seus projetos TypeScript com apenas algumas configurações mínimas, acelerando o processo de desenvolvimento e produção.
 
-- **@types/node@20.12.4**: fornece definições de tipos e interfaces nativos do Node.js, incluindo para módulos internos do Node.js, como fs, http, https, events, stream e outros.
+- **@types/node@20.12.4**: fornece definições de tipos e interfaces nativos do Node.js, incluindo para módulos internos do Node.js, como fs, nts, stream e outros.
 
 Fastify para criar o servidor HTTP e todas as rotas dos endpoints
 - **fastify@4.26.2**: Com suporte para rotas, plugins, middlewares e validação de entrada integrada, ótimo para criação de APIs e é conhecido por sua velocidade e baixo consumo de recursos. 
