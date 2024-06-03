@@ -21,15 +21,20 @@ async function seed() {
     await Promise.all( Array.from( {length: 121}, async() => {
         let attendeeId = faker.number.int({min: 100, max: 1000000});
 
-        await prisma.attendee.create({
-            data: {
-                id: attendeeId,
-                name: faker.person.fullName(),
-                email: faker.internet.email(),
-                createdAt: faker.date.recent({ days: 30 }),
-                eventId
-            }
-        });
+        try{
+            await prisma.attendee.create({
+                data: {
+                    id: attendeeId,
+                    name: faker.person.fullName(),
+                    email: faker.internet.email(),
+                    createdAt: faker.date.recent({ days: 30 }),
+                    eventId
+                }
+            });
+        }catch(err){
+            console.info(err)
+        }
+        
         if(Math.random() < 0.67){
             await prisma.checkIn.create({
                 data: {
