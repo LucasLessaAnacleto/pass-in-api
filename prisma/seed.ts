@@ -31,18 +31,19 @@ async function seed() {
                     eventId
                 }
             });
+
+            if(Math.random() < 0.67){
+                await prisma.checkIn.create({
+                    data: {
+                        attendeeId,
+                        createdAt: faker.date.recent({ days: 7 }),
+                    }
+                });
+            }
         }catch(err){
             console.info(err)
         }
-        
-        if(Math.random() < 0.67){
-            await prisma.checkIn.create({
-                data: {
-                    attendeeId,
-                    createdAt: faker.date.recent({ days: 7 }),
-                }
-            });
-        }
+              
     }) )
 }
 
