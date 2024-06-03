@@ -11,7 +11,7 @@
     "dev": "tsx watch --env-file .env src/server.ts",
     "build": "tsup src --format esm",
     "start": "node --env-file .env dist/server.js",
-    "node-build": "npm run build && prisma migrate dev && npm run db:seed",
+    "node-build": "npm ci && npm run build && prisma migrate dev && npm run db:seed",
     "db:migrate": "prisma migrate dev",
     "db:studio": "prisma studio",
     "db:seed": "prisma db seed"
