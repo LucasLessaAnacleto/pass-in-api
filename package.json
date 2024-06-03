@@ -11,11 +11,11 @@
     "dev": "tsx watch --env-file .env src/server.ts",
     "build": "tsup src --format esm",
     "start": "node --env-file .env dist/server.js",
-    "vercel-build": "prisma migrate deploy",
-    "postinstall": "prisma migrate dev && npm run db:seed",
+    "postinstall": "prisma migrate deploy && npm run db:seed",
     "db:migrate": "prisma migrate dev",
     "db:studio": "prisma studio",
-    "db:seed": "prisma db seed"
+    "db:seed": "prisma db seed",
+    "deploy": "vercel"
   },
   "keywords": [],
   "author": "",
@@ -29,7 +29,8 @@
     "prisma": "^5.12.1",
     "tsup": "^8.0.2",
     "tsx": "^4.7.2",
-    "typescript": "^5.4.4"
+    "typescript": "^5.4.4",
+    "vercel": "^34.2.4"
   },
   "dependencies": {
     "@fastify/cors": "^9.0.1",
