@@ -11,11 +11,10 @@
     "dev": "tsx watch --env-file .env src/server.ts",
     "build": "tsup src --format esm",
     "start": "node --env-file .env dist/server.js",
-    "postinstall": "prisma migrate deploy && npm run db:seed",
+    "vercel-build": "npm run build && prisma migrate dev && npm run db:seed",
     "db:migrate": "prisma migrate dev",
     "db:studio": "prisma studio",
-    "db:seed": "prisma db seed",
-    "deploy": "vercel"
+    "db:seed": "prisma db seed"
   },
   "keywords": [],
   "author": "",
