@@ -48,7 +48,8 @@ app.register( getEventAttendees );
 
 app.setErrorHandler( errorHandler );
 
-app.listen({ port: 3333, host: "0.0.0.0" }).then(() => {
+const port = parseInt(process.env.PORT!);
+app.listen({ port: port || 3333, host: "0.0.0.0" }).then(() => {
     console.log("HTTP server running!")
 });
 
