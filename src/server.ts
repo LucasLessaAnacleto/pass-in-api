@@ -2,7 +2,7 @@ import fastify from "fastify";
 
 import fastifySwagger from "@fastify/swagger";
 import fastifySwaggerUi from "@fastify/swagger-ui";
-import fastifyCors from "@fastify/cors";
+import fastifyCors, { OriginFunction } from "@fastify/cors";
 
 import { jsonSchemaTransform, serializerCompiler, validatorCompiler } from "fastify-type-provider-zod";
 import { createEvent } from "./routes/create-event";
@@ -32,8 +32,21 @@ app.register(fastifySwaggerUi, {
     routePrefix: "/docs"
 });
 
+const corsFunction: OriginFunction = function(origin, cb) {
+    if([
+        'https://pass-in-ivory.vercel.app',
+        'https://pass-in-git-main-lucas-lessa-anacletos-projects.vercel.app',
+        'https://pass-erj1ti9dp-lucas-lessa-anacletos-projects.vercel.app'
+    ].includes(origin || "")){
+        cb(null, true);
+    }else if(/^http[s]?:\/\/localhost:(.)*$/.test(origin || "")){
+        cb(null, true);
+    }else{
+        cb(null, false);
+    }
+};
 app.register(fastifyCors, {
-    origin: "*",
+    origin: corsFunction
 })
 
 app.setSerializerCompiler( serializerCompiler );
