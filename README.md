@@ -585,8 +585,8 @@ Detalhes do endpoint:
 </td>
 </tr>   
 <tr>
-    <td style="text-align:center;">{ title, details, maximumAttendees } : Object</td>
-</tr>  
+    <td style="text-align:center;">attendeeId : Number</td>
+</tr> 
 </table>
 
 #### *Parâtro de rotas:*
